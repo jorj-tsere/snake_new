@@ -30,6 +30,7 @@ var game = {
       this.speed=200;
       this.busy=false;
       this.point=-1;
+      this.posiblePointCoords = {row:null,ind:null};
   },
   checkPlayerName:function(name){
     var playerExists = false;
