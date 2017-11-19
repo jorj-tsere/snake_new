@@ -1,0 +1,119 @@
+*{padding:0;margin:0;box-sizing: border-box;}
+#board{
+  border:2px solid #446CB3;
+  display:inline-block;
+}
+body{
+  text-align:center;
+}
+.box{
+  width:10px;
+  height: 10px;
+  border:1px solid rgba(0,0,0,.1);
+  display:block;
+  float:left;
+  margin: 0 !important;
+  padding:0;
+}
+.lastInRow:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.btn{
+  padding: 6px 10px;
+  margin:6px 0;
+  background: rgba(0,0,0,.6);
+  border:1px solid gray;
+  cursor: pointer;
+  border-radius: 2px;
+   color: #fff;
+   font-family: verdana;
+   text-transform:uppercase;
+   transition:all .3s;
+}
+.btn:hover{
+  background:rgba(0,0,0,.9);
+}
+.black{
+  background:rgba(0,0,0,0.8);
+  border:1px dotted #336E7B;
+}
+.fakeBlack{
+  background:rgba(0,0,0,0.2);
+}
+.green{
+  background:green;
+}
+.snakeHead{
+  background:#336E7B;
+  border-radius: 2px;
+}
+/* ------------------------------------------------ */
+#scoreElement{
+  position: absolute;
+  top:40%;
+  width:100%;
+  text-align:center;
+  z-index:10000;
+  padding:10px;
+  background: rgba(0,0,0,0.6);
+  color:#fff;
+}
+.hiddenObject{
+  display: none;
+}
+/**/
+#userLogin{
+  width:300px;
+  border:1px solid gray;
+  margin:50px auto;
+  padding:40px 10px;
+  border-radius: 4px;
+}
+#gameOverTextNode{
+  margin:15px 0;
+}
+#playerName,#newPlayerName{
+  width:80%;
+  padding:6px 4px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border:1px solid gray;
+}
+#leaderBoardHaed{
+  margin:10px auto 4px;
+}
+#leaderBoard,#leaderBoardHead{
+  display: inline-block;
+  border-collapse: collapse;
+}
+#leaderBoardWrapper{
+  height:300px;
+  overflow-y: auto;
+  display: inline-block;
+}
+#leaderBoard tbody tr td,
+#leaderBoard thead tr th{
+  width:200px;
+  padding:10px; 
+  border:1px solid #013243;
+  width:200px;
+}
+#leaderBoard thead tr th:first-child,
+#leaderBoard tbody tr td:first-child{
+  width:50px !important;
+}
+#leaderBoard thead tr th{
+  background:#446CB3;
+  color:#E4F1FE; 
+  border:1px solid #013243;
+}
+.currentPlayer{
+  background: #22313F;
+}
+.currentPlayer td {
+  border: 1px solid #E4F1FE !important;
+  color:#E4F1FE;
+}
+/* ------------------------------- */
