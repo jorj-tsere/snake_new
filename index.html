@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <br />
+  <div id="userLogin">
+    <img src="./snake.svg" alt="snake" width="60px">
+    <br /><br />
+    <input type="text" id="playerName" placeholder="your name here...">
+    <br/>
+    <br/>
+    <button id="submitPleyer" type="button" onClick="game.submitPleyer('playerName')" class='btn'>play</button>
+    </br/>
+    <div class='textInfo hiddenObject'>please wait...</div>
+  </div>
+  <br />
+  <div id="mainWrapper" class="hiddenObject">
+    <div id="actions">
+      <h2>player: <b id="playerFullname"></b></h2>
+      <p>your score : <b id='playerScore'>0</b></p>
+      <p>your record : <b id='playerRecord'>0</b></p>
+    </div>
+    <br />
+    <div id="board"></div>
+  </div>
+    <h1>Leader board</h1>
+    <br>
+    <div id="leaderBoardWrapper">
+    <table id="leaderBoard">
+      <thead><tr><th>#</th><th>player</th><th>max score</th></tr></thead>
+      <tbody id="tbody">
+          <tr><td colspan="3" style="text-align:center; width:450px !important;">Be First :) </td></tr>
+      </tbody>
+    </table>
+    </div>
+  <div id="gameOverContent" class='hiddenObject'>
+    <h2 id="gameOverTextNode">GAME OVER</h2>
+    <br/>
+    <button class="btn" onClick="game.restartGame()">play again</button>
+    <br/>
+    <button type='button' class="btn" onClick='game.submitPleyer("newPlayerName")'>change player</button>
+    <br/>
+    <input type="text" id="newPlayerName" placeholder="new player">
+    <br/><br/>
+    <div class='textInfo hiddenObject'>please wait...</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
